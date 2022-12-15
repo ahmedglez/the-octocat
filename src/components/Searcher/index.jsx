@@ -51,6 +51,7 @@ const Searcher = (props) => {
       sx={{
         marginTop: '30px',
         width: '80%',
+        minWidth: '320px',
         height: '50px',
         color: '#c9d1d9',
       }}
@@ -65,9 +66,11 @@ const Searcher = (props) => {
         onInput={handleChange}
         InputLabelProps={{
           className: 'white-label',
+          style: { color: '#c9d1d9' },
         }}
         InputProps={{
           className: 'white-label',
+          style: {width: '100%'}
         }}
         sx={{
           width: '90%',
@@ -79,7 +82,7 @@ const Searcher = (props) => {
         sx={{
           width: '30px',
           height: '30px',
-          left: '-70px',
+          left: '-40px',
           top: '10px',
           backgroundColor: '#21262d',
           color: '#c9d1d9',
