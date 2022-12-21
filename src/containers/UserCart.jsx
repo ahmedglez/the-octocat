@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable camelcase */
 import React from 'react';
-import { CardMedia, Grid } from '@mui/material';
+import { CardMedia, Grid, Stack } from '@mui/material';
 import PrincipalInfo from '../components/PrincipalInfo';
 import Description from '../components/Description';
 
@@ -10,19 +10,48 @@ const UserCart = (props) => {
   const { avatar_url } = user;
 
   return (
-    <Grid container spacing={2} padding={3}>
-      <Grid item xs={3}>
+    <Grid
+      container
+      spacing={2}
+      sx={{ marginTop: '20px' }}
+      direction={{
+        xs: 'column',
+        sm: 'row',
+      }}
+    >
+      <Grid
+        item
+        xs={3}
+        width={{
+          xs: '80%',
+          sm: 'auto',
+        }}
+        margin={{
+          xs: '0 auto',
+          sm: '0px',
+        }}
+        justifyContent={{
+          xs: 'center',
+          sm: 'flex-start',
+        }}
+      >
         <CardMedia
           component="img"
           image={avatar_url}
-          width="100px"
+          sx={{ borderRadius: '50%' }}
           alt="Github User"
+          marginLeft={{
+            xs: '30px',
+            sm: '0px',
+          }}
         />
       </Grid>
       <Grid item xs={9}>
-        <PrincipalInfo user={user} />
+        <Stack direction="column" spacing={3}>
+          <PrincipalInfo user={user} />
+          <Description marginTop="50px" user={user} />
+        </Stack>
       </Grid>
-      <Description user={user} />
     </Grid>
   );
 };

@@ -49,8 +49,9 @@ const Searcher = (props) => {
     <Stack
       direction="row"
       sx={{
+        margin: '0 auto',
         marginTop: '30px',
-        width: '80%',
+        width: '100%',
         minWidth: '320px',
         height: '50px',
         color: '#c9d1d9',
@@ -70,7 +71,7 @@ const Searcher = (props) => {
         }}
         InputProps={{
           className: 'white-label',
-          style: {width: '100%'}
+          style: { width: '100%' },
         }}
         sx={{
           width: '90%',
@@ -84,7 +85,7 @@ const Searcher = (props) => {
           height: '30px',
           left: '-40px',
           top: '10px',
-          backgroundColor: '#21262d',
+          backgroundColor: 'transparent',
           color: '#c9d1d9',
         }}
       >
