@@ -9,7 +9,8 @@
     "start": "serve -s build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "homepage":".",
+  "keywords": [ "react", "material-ui"],
   "author": "Ahmed Gonzalez <ahmediglez@gmail.com>",
   "license": "ISC",
   "dependencies": {
