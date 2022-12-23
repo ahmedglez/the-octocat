@@ -13,32 +13,34 @@ const LocationInformation = (props) => {
   const { user } = props;
   const { location, twitter_username, email, company } = user;
   return (
-    <Grid container spacing={2} sx={{ marginTop: '15px', paddingBottom:'30px' }}>
+    <Grid
+      container
+      spacing={2}
+      sx={{ marginTop: '15px', paddingBottom: '30px' }}
+    >
       <Grid item xs={6} direction="row" spacing={2}>
-        <Stack direction="row" spacing={2}>
+        <Stack container direction="row" spacing={2}>
           <LocationOnIcon />
           <Typography>
             {location !== null ? location : 'not location added'}
           </Typography>
         </Stack>
       </Grid>
-      <Grid item xs={6} direction="row" spacing={2}>
+      <Grid container item xs={6} direction="row" spacing={2}>
         <Stack direction="row" spacing={2}>
           <TwitterIcon />
           <Typography>
-            {twitter_username !== null
-              ? twitter_username
-              : 'not twitter added'}
+            {twitter_username !== null ? twitter_username : 'not twitter added'}
           </Typography>
         </Stack>
       </Grid>
-      <Grid item xs={6} direction="row" spacing={2}>
+      <Grid container item xs={6} direction="row" spacing={2}>
         <Stack direction="row" spacing={2}>
           <EmailIcon />
           <Typography>{email !== null ? email : 'not email added'}</Typography>
         </Stack>
       </Grid>
-      <Grid item xs={6} direction="row" spacing={2}>
+      <Grid container item xs={6} direction="row" spacing={2}>
         <Stack direction="row" spacing={2}>
           <BusinessIcon />
           <Typography>

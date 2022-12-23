@@ -38,12 +38,8 @@ const UserCart = (props) => {
         <CardMedia
           component="img"
           image={avatar_url}
-          sx={{ borderRadius: '50%' }}
+          sx={{ borderRadius: '50%', marginLeft: 'auto' }}
           alt="Github User"
-          marginLeft={{
-            xs: '30px',
-            sm: '0px',
-          }}
         />
       </Grid>
       <Grid item xs={9}>
